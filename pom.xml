@@ -33,7 +33,7 @@
   <properties>
     <version.wildfly.swarm>2017.10.0</version.wildfly.swarm>
     <version.resteasy>3.0.19.Final</version.resteasy>
-    <version.arquillian.cube>1.9.2</version.arquillian.cube>
+    <version.arquillian.cube>1.15.1</version.arquillian.cube>
   </properties>
 
   <dependencyManagement>
@@ -185,6 +185,9 @@
     </profile>
     <profile>
       <id>openshift-it</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <build>
         <plugins>
           <plugin>
@@ -206,7 +209,6 @@
           </plugin>
         </plugins>
       </build>
-      <activation/>
     </profile>
 
   </profiles>
